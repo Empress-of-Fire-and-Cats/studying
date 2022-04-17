@@ -20,18 +20,18 @@ body, html {
     margin: 0;
 }
 
-.text__input {
+.text-input {
     margin: 0;
 }
 
-.input {
+.input-string, .input-letter {
     margin-left: 10px;
     background-color: none;
     font-size: 50px;
     border: none;
 }
 
-.btn__search {
+.btn-search {
     width: 200px;
     height: 120px;
     margin-top: 60px;
@@ -43,12 +43,12 @@ body, html {
     font-size: 40px;
 }
 
-.btn__search:hover {
+.btn-search:hover {
     background: rgba(86, 62, 94, 0.1);
     color:rgba(86, 62, 94, 0.9);
 }
 
-.text__res__one, .text__res__two {
+.text-res-one, .text-res-two {
     visibility: hidden;
 }
 

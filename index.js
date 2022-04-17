@@ -1,22 +1,22 @@
-const btn__search = document.querySelector('.btn__search');
-const input = document.querySelector('.input');
-const text__res__one = document.querySelector('.text__res__one');
-const text__res__two = document.querySelector('.text__res__two');
+const btnSearch = document.querySelector('.btn-search');
+const inputString = document.querySelector('.input-string');
+const inputLetter = document.querySelector('.input-letter');
+const textResOne = document.querySelector('.text-res-one');
+const textResTwo = document.querySelector('.text-res-two');
 const res = document.querySelector('.res');
 
+btnSearch.addEventListener("click", () => findLetter(inputString.value, inputLetter.value));
 
-btn__search.addEventListener("click", () => findLetter(input.value));
-
-const findLetter = (str) => {
-    const letter = 'd';
+const findLetter = (str, letter) => {
     let counter = 0;
     str = str.toLowerCase();
     for(let i = 0; i < str.length; i++) {
         if(str[i] == letter) counter++;
     }
     console.log(counter);
-    text__res__one.style.visibility = 'visible';
-    text__res__two.style.visibility = 'visible';
+    textResOne.style.visibility = 'visible';
+    textResTwo.textContent = inputLetter.value;
+    textResTwo.style.visibility = 'visible';
     res.textContent = counter;
 }
 
